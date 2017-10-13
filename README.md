@@ -15,14 +15,14 @@ $ ipme
 ## Try It
 
 ```bash
-wget -q -O - https://git.io/vdiDm | bash
+wget -q -O - file.efmeeks.net/ipme/master/ipme.sh | bash
 ```
 
 > Piping to the shell can be dangerous. It's always a good idea to check the [source code](#source) first.
 
 ## Get it
 ```bash
-wget -q -O ipme.sh https://git.io/vdiDm
+wget -q -O ipme.sh file.efmeeks.net/ipme/master/ipme.sh
 ```
 
 ## Source
@@ -30,7 +30,7 @@ wget -q -O ipme.sh https://git.io/vdiDm
 #!/bin/bash
 
 # ipme: ip address looker upper
-# https://git.io/vdiMj
+# https://git.efmeeks.net/ipme
 
 ipme() {
   echo ''; echo "  Public IP: $(wget -q -O - http://ipecho.net/plain)"

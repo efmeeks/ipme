@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ipme: ip address looker upper
-# https://git.io/vdiMj
+# https://git.efmeeks.net/ipme
 
 ipme() {
   echo ''; echo "  Public IP: $(wget -q -O - http://ipecho.net/plain)"
