@@ -1,6 +1,6 @@
 # ipme
 
-ipme is an ip address looker uppper
+ip address looker uppper
 
 ## Sample
 ```bash
