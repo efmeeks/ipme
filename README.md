@@ -6,7 +6,7 @@ ip address looker uppper
 ```text
 $ ipme
 
-  Public IP: 192.30.253.112
+  Public IP: 104.24.115.16
   Private IP: 10.0.0.108
     ♡ ipme
     
