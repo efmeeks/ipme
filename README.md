@@ -16,7 +16,7 @@ $ ipme
 
 > Piping to the shell can be dangerous. It's always a good idea to check the [source](ipme.sh) first.
 
-```bash
+```text
 curl -Ls file.efmeeks.net/ipme/ipme.sh | bash
 ```
 
