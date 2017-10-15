@@ -23,7 +23,7 @@ curl -Ls file.efmeeks.net/ipme/ipme.sh | bash
 ## Get
 
 * Download the script
-  * `curl -Ls file.efmeeks.net/ipme/ipme.sh`
+  * `curl -L file.efmeeks.net/ipme/ipme.sh -o ipme.sh`
 * Make it executable
   * `chmod +x ipme.sh`
 * Place somewhere in your `$PATH`
