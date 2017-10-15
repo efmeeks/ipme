@@ -3,27 +3,41 @@
 ip address looker uppper
 
 ## Sample
-```bash
+```text
 $ ipme
-```
-```bash
+
   Public IP: 192.30.253.112
   Private IP: 10.0.0.108
     ♡ ipme
+    
 ```
 
-## Try It
+## Try
+
+> Piping to the shell can be dangerous. It's always a good idea to check the [source](file.efmeeks.net/ipme/ipme.sh) first.
 
 ```bash
-wget -q -O - file.efmeeks.net/ipme/master/ipme.sh | bash
+curl -Ls file.efmeeks.net/ipme/ipme.sh | bash
 ```
 
-> Piping to the shell can be dangerous. It's always a good idea to check the [source code](#source) first.
+## Get
 
-## Get it
-```bash
-wget -q -O ipme.sh file.efmeeks.net/ipme/master/ipme.sh
-```
+* Download the script
+  * `curl -Ls file.efmeeks.net/ipme/ipme.sh`
+* Make it executable
+  * `chmod +x ipme.sh`
+* Place somewhere in your `$PATH`
+  * `mv ipme.sh /usr/local/bin/ipme`
+* Check with `which` or `type`
+    ```text
+    $ which ipme
+    /usr/local/bin/ipme
+    ```
+
+    ```text
+    $ type ipme
+    ipme is hashed (/Users/eric/bin/ipme)
+    ```
 
 ## Source
 ```bash
