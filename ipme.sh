@@ -1,12 +1,42 @@
 #!/bin/bash
-
-# ipme: ip address looker upper
+# ipme - ip address looker upper
 # https://git.efmeeks.net/ipme
+# ███████████████████████████████████
+# ███████████████████████████████████
+# ████ ▄▄▄▄▄ █▀█ █▄█▄▀ █ ▄▄▄▄▄ ██████
+# ████ █   █ █▀▀▀█ ▀▀▄██ █   █ ██████
+# ████ █▄▄▄█ █▀ █▀▀▄▀▀ █ █▄▄▄█ ██████
+# ████▄▄▄▄▄▄▄█▄▀ ▀▄█ █ █▄▄▄▄▄▄▄██████
+# ████▄   ▄█▄▄▄▄▀▄▀▄▄██▄█ █▄█ ███████
+# █████▀█▀█▄▄█ █▄█▀█  ▀▀█ █ █  ██████
+# ████▀█▀▄▀█▄█  ▄█▄▀█▄  ▄▀▄▄ ████████
+# ████ █▀▄██▄█▄▀█ ▄▄█  ▀▄ █▄▄ ▄██████
+# ████▄█▄▄██▄▄ ▀▄▄▀▀█  ▄▄▄ ▄▄▄▄██████
+# ████ ▄▄▄▄▄ █▄▄ █▀ ▄█ █▄█ ██  ██████
+# ████ █   █ █ ▀▀█▄█▄  ▄ ▄ ▄▄  ██████
+# ████ █▄▄▄█ █  ▄ ▄█▀▀ ▀█ █▄▄█ ██████
+# ████▄▄▄▄▄▄▄█▄██▄███████▄▄▄▄▄▄██████
+# ███████████████████████████████████
+# ███████████████████████████████████
 
 ipme() {
-  echo ''; echo "Public IP: $(wget -q -O - http://ipecho.net/plain)"
-  for ip in $(ifconfig | egrep 'inet' | egrep -v 'inet6|127' | awk '{ print $2 }'); do echo "Private IP: $ip"
-  echo -e "\x20\x20\xE2\x99\xA1 ipme"; echo ''
-} 
+  #public
+  echo ''
+  echo "public: $(curl -sL http://ipecho.net/plain)"
 
-ipme
+  #local
+  while read ip; do
+    echo "local: $ip"
+  done < <(ifconfig | egrep 'inet' | egrep -v 'inet6|127' | awk '{ print $2 }')
+
+  #signoff
+  echo -e "\x20\x20\xE2\x99\xA1 ipme"; echo ''
+}
+
+if [ "$1" == "--nofun" ]; then
+  ipme
+elif [ -x "$(which lolcat)" ]; then
+  ipme | lolcat
+else
+  ipme
+fi
