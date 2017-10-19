@@ -1,5 +1,3 @@
-<!--TOC-->
-
 # ipme
 
 ip address looker upper that &hearts;s you
